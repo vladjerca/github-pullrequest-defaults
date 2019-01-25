@@ -1,0 +1,26 @@
+{
+  "name": "GitHub PullRequest Defaults",
+  "browser_action": {
+    "default_popup": "popup.html",
+    "default_icon": "icon-128.png"
+  },
+  "icons": {
+    "32": "icon-32.png",
+    "64": "icon-64.png",
+    "128": "icon-128.png"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://github.com/*"
+      ],
+      "js": [
+        "content.bundle.js"
+      ],
+      "run_at": "document_end",
+      "all_frames": false
+    }
+  ],
+  "manifest_version": 2,
+  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'"
+}
