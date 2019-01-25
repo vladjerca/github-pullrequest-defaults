@@ -4,11 +4,53 @@
 <head>
   <meta charset="UTF-8">
   <title></title>
+  <style>
+    body {
+      margin: 0;
+      padding: 25px;
+      width: 480px;
+      height: 250px;
+    }
+
+    .tagify {
+      margin-bottom: 5px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 10px 15px;
+      border: 2px solid #2C3E50;
+      text-decoration: none;
+      margin: 0px 10px 10px 0;
+      transition: all .35s ease-in-out;
+      min-width: 100px;
+      text-align: center;
+      color: #2C3E50;
+    }
+    .btn:hover {
+      background: #2C3E50;
+      color: #fff;
+    }
+  </style>
 </head>
 
 <body>
-  <h1>Hello!</h1>
-  <img src="img/icon-128.png">
+  <form>
+    <h1>Configuration</h1>
+
+    <input name="reviewers"
+           placeholder="Add reviewers..." />
+    <input name="labels"
+           placeholder="Add labels..." />
+    <input name="assignees"
+           placeholder="Add assignees" />
+
+    <button class="btn"
+            type="submit">
+      Save Configuration
+    </button>
+
+  </form>
 </body>
 
 </html>
