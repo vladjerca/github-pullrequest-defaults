@@ -1,7 +1,9 @@
 const Options = require('./utils/Options');
+const { GithubPageObserver } = require('./utils/Github');
 
 (async () => {
-    const result = await Options.create();
+    const options = await Options.create();
+    const observer = new GithubPageObserver(options);
 
-    console.log(result);
-})();
+    options.onUpdate((opts) => observer.update(opts));
+})(); 
